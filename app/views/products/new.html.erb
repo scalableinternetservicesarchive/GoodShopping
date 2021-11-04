@@ -1,0 +1,63 @@
+<h1>New Product</h1>
+
+<%= form_with model: @product do |form| %>
+  <div>
+    <%= form.label :product_name %><br>
+    <%= form.text_field :product_name %>
+    <% @product.errors.full_messages_for(:product_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :manufacturer %><br>
+    <%= form.text_area :manufacturer %>
+    <% @product.errors.full_messages_for(:manufacturer).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :price %><br>
+    <%= form.number_field :price, :step => "0.01"%>
+    <% @product.errors.full_messages_for(:price).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :number_in_stock %><br>
+    <%= form.number_field :number_in_stock, :step => "0.5"%>
+    <% @product.errors.full_messages_for(:number_in_stock).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :average_rating %><br>
+    <%= form.number_field :average_rating, :step => "0.01"%>
+    <% @product.errors.full_messages_for(:average_rating).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_field :description %>
+    <% @product.errors.full_messages_for(:description).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :product_information %><br>
+    <%= form.text_field :product_information %>
+    <% @product.errors.full_messages_for(:product_information).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

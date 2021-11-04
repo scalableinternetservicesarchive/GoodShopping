@@ -1,0 +1,12 @@
+<h1>Products</h1>
+
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <%= link_to product.title, article %>
+      <a href="/products/<%= product.id %>">
+        <%= product.product_name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
