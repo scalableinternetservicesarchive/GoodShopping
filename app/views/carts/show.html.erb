@@ -1,0 +1,8 @@
+<h1>Cart Items</h1>
+
+<ul>
+  <% @products.each do |item| %>
+    <li> Item: <%= link_to item["product"].product_name, item["product"] %> Quantity: <%= item["quantity"] %>
+    </li>
+  <% end %>
+</ul>
