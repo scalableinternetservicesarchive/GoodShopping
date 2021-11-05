@@ -1,3 +1,40 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {background-color: #e1e6ed;}
+
+// Rounded input boxes and buttons
+textarea,select,button,input {
+   border-radius: 2vh;
+}
+
+// Make field labels fancier
+label {
+   margin-right: 4vh;
+   font-weight:bold;
+}
+
+// Add spacing around form groups
+.form-group {
+   margin-bottom: 2vh;
+}
+
+// Use Roboto for the font
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.alert {
+  color: #eb3446
+}
+
+li {
+  padding: 1vh;
+}
+
+a {
+  color: #4d4d4d
+}
