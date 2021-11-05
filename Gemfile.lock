@@ -143,6 +143,9 @@ GEM
       sprockets-rails
       tilt
     semantic_range (3.0.0)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     spring (3.0.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -183,6 +186,7 @@ DEPENDENCIES
   rails (~> 6.1.4, >= 6.1.4.1)
   sass-rails (>= 6)
   sassc (~> 2.1.0)
+  simple_form
   spring
   tzinfo-data
   web-console (>= 4.1.0)
