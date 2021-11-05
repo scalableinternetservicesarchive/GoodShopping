@@ -1,0 +1,9 @@
+<h1>Shoppers</h1>
+
+<ul>
+  <% @shoppers.each do |shopper| %>
+    <li>
+      <%= link_to shopper.name, shopper %>
+    </li>
+  <% end %>
+</ul>

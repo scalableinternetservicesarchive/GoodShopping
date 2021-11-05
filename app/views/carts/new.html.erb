@@ -1,0 +1,13 @@
+<h1>Welcome to the Cart</h1>
+
+<%= simple_form_for @cart do |f| %>
+
+  <%= f.error_notification %>
+
+
+  <%= f.input :shopper_id, collection: Shopper.all, include_blank: false %>
+  <%= f.input :product_id, collection: Product.all, include_blank: false %>
+  <%= f.input :quantity  %>
+  <%= f.button :submit, "Add",  class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %>
