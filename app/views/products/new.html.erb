@@ -1,27 +1,29 @@
-<h1>New Product</h1>
+<div class="top-level-container">
+  <h1>Add a product</h1>
 
-<%= simple_form_for @product do |f| %>
+  <%= simple_form_for @product do |f| %>
 
-  <%= f.error_notification %>
+    <%= f.error_notification %>
 
-  <%= f.input :product_name %>
-  <%= f.input :manufacturer_id, collection: Manufacturer.all, include_blank: false %>
-  <%= f.input :price %>
-  <%= f.input :number_in_stock %>
-  <%= f.input :number_in_stock %>
-  <%= f.input :average_rating %>
-  <%= f.input :description %> 
-  <%= f.input :product_information %> 
+    <%= f.input :product_name %>
+    <%= f.input :manufacturer_id, collection: Manufacturer.all, include_blank: false %>
+    <%= f.input :price %>
+    <%= f.input :number_in_stock %>
+    <%= f.input :number_in_stock %>
+    <%= f.input :average_rating %>
+    <%= f.input :description %> 
+    <%= f.input :product_information %> 
 
- <%= f.button :submit, class: "btn-primary" %>
-  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-<% end %>
-<%# <%= form_with model: @product do |form| %> 
-  <%# <div>
-    <%= form.label :product_name %>
-    <%# <%= form.text_field :product_name %>
-    <%# <% @product.errors.full_messages_for(:product_name).each do |message| %>
-      <%# <div><%= message %>
-      <%# </div> %> 
-    <%# <% end %> 
-  <%# </div> %>
+   <%= f.button :submit, class: "btn-primary" %>
+    <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+  <% end %>
+  <%# <%= form_with model: @product do |form| %> 
+    <%# <div>
+      <%= form.label :product_name %>
+      <%# <%= form.text_field :product_name %>
+      <%# <% @product.errors.full_messages_for(:product_name).each do |message| %>
+        <%# <div><%= message %>
+        <%# </div> %> 
+      <%# <% end %> 
+    <%# </div> %>
+<div>
