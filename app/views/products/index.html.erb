@@ -3,10 +3,10 @@
 <ul>
   <% @products.each do |product| %>
     <li>
-      <%= link_to product.title, article %>
-      <a href="/products/<%= product.id %>">
-        <%= product.product_name %>
-      </a>
+      <%= link_to product.title, product %>
+      <%# <a href="/products/<%= product.id %>">
+        <%# <%= product.product_name %>  %>
+      <%# </a> %> %>
     </li>
   <% end %>
 </ul>

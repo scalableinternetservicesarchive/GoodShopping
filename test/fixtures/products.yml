@@ -2,18 +2,18 @@
 
 one:
   product_name: MyString
-  manufacturer: MyString
+  manufacturer: one
   price: 1.5
-  number_in_stock: 
+  number_in_stock: 1
   average_rating: 1.5
   description: MyText
   product_information: MyText
 
 two:
   product_name: MyString
-  manufacturer: MyString
+  manufacturer: two
   price: 1.5
-  number_in_stock: 
+  number_in_stock: 1
   average_rating: 1.5
   description: MyText
   product_information: MyText

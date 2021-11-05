@@ -1,0 +1,34 @@
+<h1>New Manufacturer</h1>
+
+
+
+
+<%= form_with model: @manufacturer do |form| %>
+  <div>
+    <%= form.label :Name %><br>
+    <%= form.text_field :name %>
+    <% @manufacturer.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Email %><br>
+    <%= form.text_area :email %>
+    <% @manufacturer.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Telephone %><br>
+    <%= form.number_field :telephone, :step => "0.5"%>
+    <% @manufacturer.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
