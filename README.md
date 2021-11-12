@@ -1,8 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Product Development Links:
+* [Figma](https://www.figma.com/file/wYseLl4dGhBDW8K4wTWGgj/Final-Project?node-id=0%3A1) (Frontend Designs)
+* [Trello](https://trello.com/b/HlyjlkJc) (Task Manager)
 
+<br>
 Things you may want to cover:
 
 * Ruby version
