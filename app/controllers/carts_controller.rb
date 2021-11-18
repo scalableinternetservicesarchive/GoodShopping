@@ -6,7 +6,7 @@ class CartsController < ApplicationController
     def create
         @cart = Cart.new(cart_params)
         if @cart.save
-            render :new
+            redirect_to @cart #show page 
           else
             flash.now[:error] = "Your product is not added!"
             render :new
