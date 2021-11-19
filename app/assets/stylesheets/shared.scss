@@ -1,0 +1,41 @@
+/**
+ * Styling for elements that are shared across pages
+ */
+
+// Consistent style for all titles. For example, "Upload Product" and "Profile"
+.page-title {
+  font-size: 4vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/**
+ * Main navbar on top
+ */
+.main-navbar {
+  background: #1E4677;
+  overflow: auto;
+  margin-top: 4vh;
+  margin-left: 0;
+}
+
+.main-navbar-link-wrapper {
+  float: left;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  border-style: solid;
+  border-color: white;
+  border-width: 0.05vh;
+}
+
+.main-navbar-link-text {
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-navbar-link {
+  text-decoration: none;
+}
