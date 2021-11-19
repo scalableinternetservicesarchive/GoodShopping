@@ -1,0 +1,79 @@
+
+// Use Roboto for the font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+
+/**
+ * Banner styling
+ */
+// TODO Make banner text vertically centered inside container
+.good-shopping-banner-container {
+  overflow: auto;
+}
+
+.good-shopping-banner-logo {
+  height:6vh;
+  width:6vh;
+  padding:1vh;
+  background: #a3a3a3;
+  float: left;
+}
+
+.good-shopping-banner-text {
+  font-size: 4vh;
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/**
+ * Sign in container styling
+ */
+// TODO Make form horizontally centered inside container
+#sign-in-create-container {
+  width: 50vh;
+  overflow: auto;
+  margin: 5vh auto;
+  background: #1E4677;
+  padding: 5vh;
+  //margin-top: 3vh;
+}
+
+#sign-in-form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sign-in-create-input-field {
+  width: 90%;
+  margin: 1vh;
+  padding: 1vh;
+}
+
+.sign-in-create-submit {
+  font-family: 'Roboto', sans-serif;
+  border-radius: 1vh;
+  border: 0;
+}
+
+#sign-in-submit {
+  background: #FEBD69;
+}
+
+#sign-in-submit:focus {
+  background: #f0b262;
+}
+
+#sign-in-create-OR-text {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.create-account-submit {
+  background: #FFD814;
+}
+
+.create-account-submit:focus {
+  background: #e0be12;
+}
