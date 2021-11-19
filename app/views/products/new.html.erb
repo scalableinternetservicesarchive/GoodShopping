@@ -1,5 +1,27 @@
-<h1>Add a product</h1>
+<div class="good-shopping-banner-container">
+  <div class="good-shopping-banner-logo"></div>
+  <p class="good-shopping-banner-text">Good Shopping</p>
+</div>
 
+<div class="main-navbar">
+  <a class="main-navbar-link" href="/products">
+    <div class="main-navbar-link-wrapper">
+      <p class="main-navbar-link-text">Products</p>
+    </div>
+  </a>
+  <a class="main-navbar-link" href="/orders">
+    <div class="main-navbar-link-wrapper">
+      <p class="main-navbar-link-text">Orders</p>
+    </div>
+  </a>
+  <a class="main-navbar-link" href="/profile">
+    <div class="main-navbar-link-wrapper">
+      <p class="main-navbar-link-text">Profile</p>
+    </div>
+  </a>
+</div>
+<br>
+<p class="page-title">Upload Product</p>
 <%= simple_form_for @product do |f| %>
 
   <%= f.error_notification %>
@@ -8,11 +30,9 @@
   <%= f.input :manufacturer_id, collection: Manufacturer.all, include_blank: false %>
   <%= f.input :price %>
   <%= f.input :number_in_stock %>
-  <%= f.input :number_in_stock %>
-  <%= f.input :average_rating %>
-  <%= f.input :description %> 
+  <%= f.input :description %>   <!--FIXME What is the difference between decr and prod info? -->
   <%= f.input :product_information %> 
-  <!-- Input image-->
+  <%= f.input :img, :as => :file%> 
   <%= f.button :submit, class: "btn-primary" %>
   <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
 <% end %>
