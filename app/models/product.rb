@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :manufacturer
+  belongs_to :manufacturer, dependent: :destroy 
 
   validates :product_name, presence: true
   validates :manufacturer, presence: true

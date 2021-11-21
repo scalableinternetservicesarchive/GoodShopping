@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2021_11_20_201503) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "carts", "products"
-  add_foreign_key "carts", "shoppers"
-  add_foreign_key "products", "manufacturers"
+  add_foreign_key "carts", "products", on_delete: :cascade
+  add_foreign_key "carts", "shoppers", on_delete: :cascade
+  add_foreign_key "products", "manufacturers", on_delete: :cascade
 end
