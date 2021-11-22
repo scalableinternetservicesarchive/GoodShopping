@@ -1,4 +1,4 @@
 class Cart < ApplicationRecord
-  # belongs_to :shopper
-  # belongs_to :product
+  belongs_to :shopper, dependent: :destroy 
+  belongs_to :product, dependent: :destroy 
 end
