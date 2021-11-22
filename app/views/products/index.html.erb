@@ -9,8 +9,17 @@ Here are all of the products carried by the store:
 
 <ul>
   <% @products.each do |product| %>
-    <li>
-      <%= link_to product.product_name, product %>
-    </li>
+    <div class=productTile>
+      <div class=imgplaceholder></div>
+      <div class=text>
+        <div class=heading><%= link_to product.product_name, product %></div>
+        <div class=rating>Rating: <%= product.average_rating %></div>
+        <div class=description><%= product.description %></div>
+        <div class=specs><%= product.product_information %></div>
+      </div>
+      <div class=rightText>$<%= product.price %></div>
+      
+    </div>
+    <br>
   <% end %>
 </ul>

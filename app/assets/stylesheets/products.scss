@@ -26,3 +26,75 @@ li {
 a {
   color: #4d4d4d
 }
+
+// ---------------- //
+
+.productTile{
+  width:70%;
+  height:150px;
+  background-color: white;
+
+}
+
+.productTileOpen{
+  width:70%;
+  height:500px;
+  background-color: white;
+
+}
+
+.imgplaceholder{
+  width: 13%;
+  height: 100%;
+  background-color: grey;
+  float: left;
+}
+
+.text{
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 30%;
+  float: left;
+}
+
+.heading{
+  font-size: large;
+  font-weight: 600;
+}
+
+.rating{
+  font-size: small;
+}
+
+.manufacturar{
+  font-size: small;
+  color: grey;
+}
+
+.description{
+  font-size: small;
+}
+
+.specs{
+  font-size: small;
+}
+
+.stock{
+  font-size: medium;
+  color: darkgreen;
+}
+
+.price{
+  font-size: large;
+  //float: right;
+  //padding-top: 70px;
+  //padding-right: 10%;
+}
+
+.rightText{
+  font-size: large;
+  float: right;
+  padding-top: 70px;
+  padding-right: 10%;
+  text-align: center;
+}

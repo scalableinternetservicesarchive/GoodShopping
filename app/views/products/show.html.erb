@@ -14,3 +14,24 @@
 <p>Description: <%= @product.description %></p>
 <p>Product Information: <%= @product.product_information %></p>
 <!-- Add the image from product.img -->
+    <div class=productTileOpen>
+      <div class=imgplaceholder></div>
+      <div class=text>
+        <div class=heading><%= link_to @product.product_name %></div>
+        <div class=manufacturar><%= link_to manufacturer.name, manufacturer %></div>
+        <div class=rating>Rating: <%= @product.average_rating %></div>
+        <div class=description><%= @product.description %></div>
+        <div class=specs><%= @product.product_information %></div>
+      </div>
+      <div class=rightText>
+        <div class=price>$<%= @product.price %></div>
+        <br>
+        <div class=stock><%= @product.number_in_stock %> left in stock</div>
+        <br>
+        <form>
+          <input class=customButton type=submit value="Add to cart">
+        </form>
+      </div>
+      
+    </div>
+
