@@ -1,0 +1,16 @@
+<h1>Edit Shopper</h1>
+
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= form_with model: @shopper, url: shopper_path(@shopper), method: :patch, local: true do |f| %>
+
+  <%= f.text_field :email %>
+  <%= f.text_field :telephone %>
+  <%= f.text_field :address %>
+  <%= f.submit %>
+
+<% end %>

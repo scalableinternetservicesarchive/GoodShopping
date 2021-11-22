@@ -20,15 +20,33 @@ class ShoppersController < ApplicationController
           end
     end
 
+    def edit
+      @shopper = Shopper.find(params[:id])
+    end
+
+    def update
+      @shopper = Shopper.find(params[:id])
+
+      if @shopper.update(shopper_update_params)
+        redirect_to edit_shopper_path(@shopper), notice: "Shopper updated successfully!"
+      else
+        redirect_to edit_shopper_path(@shopper), error: "Error updating shopper."
+      end
+    end
+
     def destroy
         @shopper = Shopper.find(params[:id])
         @shopper.destroy
     
         redirect_to root_path
-      end 
+    end 
 
     private
     def shopper_params
       params.require(:shopper).permit(:username, :password, :name, :email, :telephone, :address)
+    end
+
+    def shopper_update_params
+      params.require(:shopper).permit(:email, :telephone, :address)
     end
 end
