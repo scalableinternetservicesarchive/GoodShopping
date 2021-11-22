@@ -4,16 +4,6 @@
   <p class="good-shopping-banner-text">Good Shopping</p>
 </div>
 
-<h1><%= @product.product_name %></h1>
-
-<% manufacturer = Manufacturer.find(@product.manufacturer_id)%>
-<p>Manufacturer: <%= link_to manufacturer.name, manufacturer %> </p>
-<p>Price: <%= @product.price %></p>
-<p>Number in stock: <%= @product.number_in_stock %></p>
-<p>Average Rating: <%= @product.average_rating %></p>
-<p>Description: <%= @product.description %></p>
-<p>Product Information: <%= @product.product_information %></p>
-<!-- Add the image from product.img -->
     <div class=productTileOpen>
       <div class=imgplaceholder></div>
       <div class=text>
