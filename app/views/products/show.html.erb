@@ -4,6 +4,10 @@
   <p class="good-shopping-banner-text">Good Shopping</p>
 </div>
 
+<h1><%= @product.product_name %></h1>
+
+<% manufacturer = Manufacturer.find(@product.manufacturer_id)%>
+<!-- Add the image from product.img -->
     <div class=productTileOpen>
       <div class=imgplaceholder></div>
       <div class=text>
