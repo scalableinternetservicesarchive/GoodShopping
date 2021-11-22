@@ -9,10 +9,12 @@ Here are all of the products carried by the store:
 
 <ul>
   <% @products.each do |product| %>
+    <% manufacturer = Manufacturer.find(product.manufacturer_id)%>
     <div class=productTile>
       <div class=imgplaceholder></div>
       <div class=text>
         <div class=heading><%= link_to product.product_name, product %></div>
+        <div class=manufacturar><%= manufacturer.name %></div>
         <div class=rating>Rating: <%= product.average_rating %></div>
         <div class=description><%= product.description %></div>
         <div class=specs><%= product.product_information %></div>
