@@ -30,7 +30,7 @@ class ManufacturersController < ApplicationController
 
     private
     def manufacturer_params
-      params.require(:manufacturer).permit(:name, :email, :telephone)
+      params.require(:manufacturer).permit(:username, :password, :name, :email, :telephone)
     end
      
 end
