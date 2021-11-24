@@ -50,5 +50,9 @@ class ManufacturersController < ApplicationController
     def manufacturer_update_params
       params.require(:manufacturer).permit(:email, :telephone)
     end
+
+    def manufacturer_update_params
+      params.require(:manufacturer).permit(:email, :telephone)
+    end
      
 end
