@@ -50,9 +50,9 @@
   <sessions>
     <session name="manufacturer" type="ts_http" weight="1">
          <request><http method="GET" url="/"></http></request>
-         <request><http method="POST" url="/manufacturers" version="1.1" contents="username=Shereen_User&amp;password=Shereen&amp;name=Shereen&amp;email=shereen@gmail.pro&amp;telephone=010101011"></http></request>
+         <request><http method="POST" url="/manufacturers" version="1.1" contents="manufacturer[username]=Shereen_User&amp;manufacturer[password]=Shereen&amp;manufacturer[name]=Shereen&amp;manufacturer[email]=shereen@gmail.pro&amp;manufacturer[telephone]=010101011"></http></request>
          <thinktime value="8" random="true"></thinktime>
-         <request><http method="POST" url="/products" version="1.1" contents="product_name=api_toy&amp;manufacturer_id=1&amp;price=10&amp;number_in_stock=15&amp;average_rating=3.3&amp;description='This is the description'&amp;product_information='This is the specs'"></http></request>
+         <request><http method="POST" url="/products" version="1.1" contents="product[product_name]=api_toy&amp;product[manufacturer_id]=1&amp;product[price]=10&amp;product[number_in_stock]=15&amp;product[average_rating]=3.3&amp;product[description]='This is the description'&amp;product[product_information]='This is the specs'"></http></request>
     </session>
   </sessions>
 </tsung>
