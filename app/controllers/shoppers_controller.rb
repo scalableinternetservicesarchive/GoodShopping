@@ -14,7 +14,7 @@ class ShoppersController < ApplicationController
     def create
         @shopper = Shopper.new(shopper_params)
         if @shopper.save
-            redirect_to root_path, notice:  "Shopper added"
+            redirect_to products_path, notice:  "Shopper added"
           else
             render :new,  status: :unprocessable_entity
           end
