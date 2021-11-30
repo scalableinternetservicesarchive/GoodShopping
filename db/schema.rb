@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2021_11_22_050619) do
     t.string "password"
   end
 
-  add_foreign_key "carts", "products", on_delete: :cascade
-  add_foreign_key "carts", "shoppers", on_delete: :cascade
-  add_foreign_key "products", "manufacturers", on_delete: :cascade
+  add_foreign_key "carts", "products"
+  add_foreign_key "carts", "shoppers"
+  add_foreign_key "products", "manufacturers"
 end
