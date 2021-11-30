@@ -36,7 +36,7 @@ class ProductsController < ApplicationController
     # end
 
     if @product.save
-      redirect_to @product, :notice => "product added"
+      redirect_to root_path, :notice => "product added"
     else
       flash.now[:error] = "Your product is not added!"
       render :new
