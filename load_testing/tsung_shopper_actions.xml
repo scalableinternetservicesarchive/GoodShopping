@@ -50,12 +50,18 @@
   <sessions>
     <session name="shopper_actions" type="ts_http" weight="1">
       <request><http method="GET" url="/"></http></request>
-      <request><http method="GET" url="/shoppers/new"></http></request>
-      <request><http method="POST" url="/manufacturers" version="1.1" contents="manufacturer[username]=Shereen_User&amp;manufacturer[password]=Shereen&amp;manufacturer[name]=Shereen&amp;manufacturer[email]=shereen@gmail.pro&amp;manufacturer[telephone]=010101011"></http></request>
-      <request><http method="POST" url="/shoppers" version="1.1" contents="shopper[username]=Jared_Fitton&amp;shopper[password]=password&amp;shopper[name]=Jared&amp;shopper[email]=jaredfitton@ucsbe.edu&amp;shopper[telephone]=8051234567"></http></request>
-      <request><http method="POST" url="/products" version="1.1" contents="product[product_name]=api_toy&amp;product[manufacturer_id]=1&amp;product[price]=10&amp;product[number_in_stock]=15&amp;product[average_rating]=3.3&amp;product[description]='This is the description'&amp;product[product_information]='This is the specs'"></http></request>
+      <request><http method="GET" url="/products"></http></request>
+      <thinktime value="6" random="true"></thinktime>
+      <!-- Add first item to cart -->
+      <request><http method="GET" url="/products/1"></http></request>
       <thinktime value="6" random="true"></thinktime>
       <request><http method="POST" url="/carts/new" version="1.1" contents="cart[shopper_id]=1&amp;cart[product_id]=1&amp;cart[quantity]=1"></http></request>
+      <request><http method="GET" url="/products"></http></request>
+      <!-- Add second item to cart -->
+      <thinktime value="6" random="true"></thinktime>
+      <request><http method="GET" url="/products/2"></http></request>
+      <thinktime value="6" random="true"></thinktime>
+      <request><http method="POST" url="/carts/new" version="1.1" contents="cart[shopper_id]=1&amp;cart[product_id]=2&amp;cart[quantity]=1"></http></request>
     </session>
   </sessions>
 </tsung>
