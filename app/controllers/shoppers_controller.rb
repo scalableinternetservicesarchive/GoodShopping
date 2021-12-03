@@ -14,10 +14,10 @@ class ShoppersController < ApplicationController
     def create
         @shopper = Shopper.new(shopper_params)
         if @shopper.save
-            redirect_to products_path, notice:  "Shopper added"
-          else
-            render :new,  status: :unprocessable_entity
-          end
+          redirect_to shopper_path(@shopper), notice: "Shopper added"
+        else
+          render :new,  status: :unprocessable_entity
+        end
     end
 
     def edit
