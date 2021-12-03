@@ -25,9 +25,23 @@ class CartsController < ApplicationController
         end
     end
 
-    private
-        def cart_params
-        params.require(:cart).permit(:shopper_id, :product_id, :quantity)
+    def edit
+        @cart = Cart.find(params[:id])
+    end
+
+    def update
+        @cart = Cart.find(params[:id])
+
+        if @cart.update(cart_params)
+            redirect_to edit_cart_path(@cart), notice: "Cart updated successfully!"
+        else
+            redirect_to edit_cart_path(@cart), error: "Error updating cart."
         end
+    end
+
+    private
+    def cart_params
+        params.require(:cart).permit(:shopper_id, :product_id, :quantity)
+    end
 
 end
