@@ -4,6 +4,36 @@
   <p class="good-shopping-banner-text">Good Shopping</p>
 </div>
 
+<%
+  profile_url = "/" + @current_user["type"] + "s/" + @current_user["id"].to_s
+  cart_url = "/carts/" + @current_user["id"].to_s
+%>
+
+<div class="main-navbar">
+  <a class="main-navbar-link" href="/products">
+    <div class="main-navbar-link-wrapper">
+      <p class="main-navbar-link-text">Products</p>
+    </div>
+  </a>
+  <a class="main-navbar-link" href=<%=profile_url%>>
+    <div class="main-navbar-link-wrapper">
+      <p class="main-navbar-link-text">Profile</p>
+    </div>
+  </a>
+  <% if @current_user["type"] == "shopper" %>
+    <a class="main-navbar-link" href=<%=cart_url%>>
+      <div class="main-navbar-link-wrapper">
+        <p class="main-navbar-link-text">Cart</p>
+      </div>
+    </a>
+  <% end %>
+  <a class="main-navbar-link" href="/logout">
+    <div class="main-navbar-link-wrapper">
+      <p class="main-navbar-link-text">Log out</p>
+    </div>
+  </a>
+</div>
+
 <h1><%= @product.product_name %></h1>
 
 <% manufacturer = Manufacturer.find(@product.manufacturer_id)%>

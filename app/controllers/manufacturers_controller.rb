@@ -1,9 +1,11 @@
 class ManufacturersController < ApplicationController
     def index
-        @manufacturers = Manufacturer.all
+      @current_user = session[:current_user]
+      @manufacturers = Manufacturer.all
     end
 
     def show
+        @current_user = session[:current_user]
         @manufacturer = Manufacturer.find(params[:id])
     end
 

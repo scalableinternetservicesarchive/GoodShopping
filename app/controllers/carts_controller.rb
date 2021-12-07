@@ -1,9 +1,11 @@
 class CartsController < ApplicationController
     def new
+        @current_user = session[:current_user]
         @cart = Cart.new
     end
 
     def create
+        @current_user = session[:current_user]
         @cart = Cart.new(cart_params)
         if @cart.save
             redirect_to @cart #show page 
@@ -14,6 +16,7 @@ class CartsController < ApplicationController
     end
 
     def show
+        @current_user = session[:current_user]
         # shopper = Shopper.find(params[:id])
         shopping_list = Cart.where(shopper_id: params[:id])
 

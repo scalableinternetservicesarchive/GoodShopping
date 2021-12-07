@@ -1,21 +1,26 @@
 class ProductsController < ApplicationController
   def index
+    @current_user = session[:current_user]
     @products = Product.all
   end
 
   def show
+    @current_user = session[:current_user]
     @product = Product.find(params[:id])
   end
 
   def new
+    @current_user = session[:current_user]
     @product = Product.new
   end
 
   def edit
+    @current_user = session[:current_user]
     @product = Product.find(params[:id])
   end
 
   def update
+    @current_user = session[:current_user]
     @product = Product.find(params[:id])
 
     if @product.update(product_update_params)

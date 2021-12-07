@@ -1,30 +1,36 @@
 class ShoppersController < ApplicationController
     def index
-        @shoppers = Shopper.all
+      @current_user = session[:current_user]
+      @shoppers = Shopper.all
     end
 
     def show
-        @shopper = Shopper.find(params[:id])
+      @current_user = session[:current_user]
+      @shopper = Shopper.find(params[:id])
     end
 
     def new
-        @shopper = Shopper.new
+      @current_user = session[:current_user]
+      @shopper = Shopper.new
     end
 
     def create
-        @shopper = Shopper.new(shopper_params)
-        if @shopper.save
-          redirect_to shopper_path(@shopper), notice: "Shopper added"
-        else
-          render :new,  status: :unprocessable_entity
-        end
+      @current_user = session[:current_user]
+      @shopper = Shopper.new(shopper_params)
+      if @shopper.save
+        redirect_to shopper_path(@shopper), notice: "Shopper added"
+      else
+        render :new,  status: :unprocessable_entity
+      end
     end
 
     def edit
+      @current_user = session[:current_user]
       @shopper = Shopper.find(params[:id])
     end
 
     def update
+      @current_user = session[:current_user]
       @shopper = Shopper.find(params[:id])
 
       if @shopper.update(shopper_update_params)
