@@ -2,7 +2,7 @@
   <div class="good-shopping-banner-logo"></div>
   <p class="good-shopping-banner-text">Good Shopping</p>
 </div>
-
+<%# if false%>
 <%
   profile_url = "/" + @current_user["type"] + "s/" + @current_user["id"].to_s
   cart_url = "/carts/" + @current_user["id"].to_s
@@ -32,20 +32,34 @@
     </div>
   </a>
 </div>
-
+<% #end%>
 <br>
 <p class="page-title">Upload Product</p>
-<%= simple_form_for @product do |f| %>
+<div id="sign-up-create-container">
+  <div id="sign-up-container">
+    <div id="sign-up-form">
+      <%= simple_form_for @product do |f| %>
 
-  <%= f.error_notification %>
+        <%= f.error_notification %>
 
-  <%= f.input :product_name %>
-  <%= f.input :manufacturer_id, collection: Manufacturer.all, include_blank: false %>
-  <%= f.input :price %>
-  <%= f.input :number_in_stock %>
-  <%= f.input :description %>   <!--FIXME What is the difference between decr and prod info? -->
-  <%= f.input :product_information %> 
-  <%= f.input :img, :as => :file%> 
-  <%= f.button :submit, class: "btn-primary" %>
-  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-<% end %>
+        <p class:"field-labels"> Name</p>
+        <%= f.input :product_name , :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Product Name', label:false%>
+        <p class:"field-labels"> Manufacturer</p>
+        <%= f.input :manufacturer_id, collection: Manufacturer.all, include_blank: false , :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Manufacturer', label:false%>
+        <p class:"field-labels"> Avarage Rating</p>
+        <%= f.input :average_rating, collection: [1,2,3,4,5], include_blank: false , :input_html => { :class => 'sign-up-create-input-field-dropdown' }, placeholder: 'Average Rating', label:false%>
+        <p class:"field-labels"> Price</p>
+        <%= f.input :price , :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Price', label:false%>
+        <p class:"field-labels"> Number in Stock</p>
+        <%= f.input :number_in_stock , :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Number in stock', label:false%>
+        <p class:"field-labels"> Description</p>
+        <%= f.input :description , :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Description', label:false%>   <!--FIXME What is the difference between decr and prod info? -->
+        <p class:"field-labels"> Product Information</p>
+        <%= f.input :product_information, :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Product Information', label:false%> 
+        <%#= f.input :img, :as => :file%> 
+        <%= f.button :submit, class: "sign-up-create-input-field sign-up-create-submit", id: "sign-up-submit" %>
+        <%#= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

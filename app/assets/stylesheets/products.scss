@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 body {background-color: #f0f0f0;}
 
 // Make field labels fancier
@@ -50,11 +51,19 @@ a {
   float: left;
 }
 
-.text{
+.text1{
   padding-left: 20px;
   padding-top: 20px;
   width: 30%;
   float: left;
+}
+
+.text{
+    width: 90%;
+    height: 100px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 10px;
 }
 
 .heading{
@@ -98,3 +107,70 @@ a {
   padding-right: 10%;
   text-align: center;
 }
+
+
+
+
+/**
+ * Sign up container styling
+ */
+// TODO Make form horizontally centered inside container
+#sign-up-create-container {
+  width: 50vh;
+  overflow: auto;
+  margin: 5vh auto;
+  background: #1E4677;
+  padding: 5vh;
+  //margin-top: 3vh;
+}
+
+#sign-up-form {
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sign-up-create-input-field {
+  width: 90%;
+  margin: 1vh;
+  padding: 1vh;
+  border-radius: 1vh;
+  border: 0;
+  margin: auto;
+
+}
+.sign-up-create-input-field-dropdown {
+  width: 20%;
+  margin: 1vh;
+  padding: 1vh;
+  border-radius: 1vh;
+  border: 0;
+  margin: auto;
+
+}
+.field-labels{
+    color:white;
+}
+
+.sign-up-create-submit {
+  font-family: 'Roboto', sans-serif;
+  border-radius: 1vh;
+  border: 0;
+  
+}
+
+#sign-up-submit {
+  background: #FEBD69;
+}
+
+#sign-up-submit:focus {
+  background: #f0b262;
+}
+
+#sign-up-create-OR-text {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+

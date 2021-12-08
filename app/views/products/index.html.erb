@@ -44,7 +44,7 @@ Here are all of the products carried by the store:
     <% manufacturer = Manufacturer.find(product.manufacturer_id)%>
     <div class=productTile>
       <div class=imgplaceholder></div>
-      <div class=text>
+      <div class=text1>
         <div class=heading><%= link_to product.product_name, product %></div>
         <div class=manufacturar><%= manufacturer.name %></div>
         <div class=rating>Rating: <%= product.average_rating %></div>
