@@ -8,7 +8,6 @@
   profile_url = "/" + @current_user["type"] + "s/" + @current_user["id"].to_s
   cart_url = "/carts/" + @current_user["id"].to_s
 %>
-
 <div class="main-navbar">
   <a class="main-navbar-link" href="/products">
     <div class="main-navbar-link-wrapper">
@@ -42,11 +41,28 @@
   </div>
 <% end %>
 
-<%= form_with model: @shopper, url: shopper_path(@shopper), method: :patch, local: true do |f| %>
+<div id="sign-up-create-container">
+  <div id="sign-up-container">
+    <div id="sign-up-form">
+      <%= form_with model: @shopper, url: shopper_path(@shopper), method: :patch, local: true do |f| %>
 
-  <%= f.text_field :email %>
-  <%= f.text_field :telephone %>
-  <%= f.text_field :address %>
-  <%= f.submit %>
+        <p style={color=white}>Email</p>
+        <%= f.text_field :email, :class => 'sign-up-create-input-field', placeholder: 'Email'%>
+        <br>
+        <p style={color=white}>Password</p>
+        <%= f.text_field :password, :type => "password", :class => 'sign-up-create-input-field' , placeholder: 'Password'  %>
+        <br>
+        <p style={color=white}>Telephone</p>
+        <%= f.text_field :telephone, :class => 'sign-up-create-input-field' , placeholder: 'Telephone' %>
+        <br>
+        <p style={color=white}>Address</p>
+        <%= f.text_field :address, :class => 'sign-up-create-input-field' , placeholder: 'Address' %>
+        <br>
+        <p style={color=white}>.</p>
+        <%= f.submit class: "sign-up-create-input-field sign-up-create-submit", id:"sign-up-submit"%>
 
-<% end %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

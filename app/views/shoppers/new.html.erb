@@ -6,18 +6,24 @@
 
 <h1>New Shopper</h1>
 
-<%= simple_form_for @shopper do |f| %>
+<div id="sign-up-create-container">
+  <div id="sign-up-container">
+    <div id="sign-up-form">
+      <%= simple_form_for @shopper do |f| %>
 
-  <%= f.error_notification %>
+        <%= f.error_notification %>
 
-  <%= f.input :name %>
-  <%= f.input :username %>
-  <%= f.input :password %>
-  <%= f.input :email %>
-  <%= f.input :address %>
-  <%= f.input :telephone %>
+        <%= f.input :name, :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Name', label:false %>
+        <%= f.input :username, :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Username', label:false %>
+        <%= f.input :password, :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Password', label:false %>
+        <%= f.input :email, :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Email', label:false %>
+        <%= f.input :address, :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Address', label:false %>
+        <%= f.input :telephone, :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Telephone', label:false %>
 
 
- <%= f.button :submit, class: "btn-primary" %>
-  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-<% end %>
+       <%= f.button :submit, class: "sign-up-create-input-field sign-up-create-submit", id:"sign-up-submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

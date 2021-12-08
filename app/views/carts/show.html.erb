@@ -42,3 +42,38 @@
     </li>
   <% end %>
 </ul>
+
+<ul>
+  <% total_price = 0%>
+  <% @products.each do |item| %>
+    <% total_price = total_price + item["product"].price%>
+    <div class=productTile>
+      <div class=imgplaceholder></div>
+      <div class=text>
+        <div class=heading><%= link_to item["product"].product_name, item["product"] %></div>
+        <div class=rating>Rating: <%= item["product"].average_rating %></div>
+        <div class=description><%= item["project"].description %></div>
+        <div class=specs><%= item["product"].product_information %></div>
+      </div>
+      <div class=rightText>$<%= item["product"].price %></div>
+      <div class=rightText>
+        <div class=price>$<%= item["product"].price %>
+        <br>
+        <div class=stock>Quantity: <%= item["quantity"] %>
+        </div>
+        <br>
+      </div>
+
+      
+    </div>
+    <br>
+  <% end %>
+
+  <div class=TotalTile>
+    <div class=text> Total Price: </div>
+    <div class=rightTextTotal>$<%= total_price %></div>
+  </div>
+  <form>
+    <input class=customButtonCart type=submit value="Place Order">
+  </form>
+</ul>

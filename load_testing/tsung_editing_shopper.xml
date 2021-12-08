@@ -6,7 +6,7 @@
   </clients>
 
   <servers>
-     <server host="GoodShopping-s-elsayed.eba-kvqpvst9.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
+      <server host="goodshopping.eba-kvqpvst9.us-west-2.elasticbeanstalk.com" port="80" type="tcp"></server>
   </servers>
 
   <load>
@@ -54,7 +54,7 @@
 <request><http method="POST" url="/shoppers" version="1.1" contents="shopper[username]=Shereen_User&amp;shopper[password]=Shereen&amp;shopper[name]=Shereen&amp;shopper[email]=shereen@gmail.pro&amp;shopper[telephone]=010101011"></http></request>
 <thinktime value="8" random="true"></thinktime>
 <request><http method="GET" url="/shoppers/1/edit"></http></request>
-<request><http method="POST" url="/shoppers/edit/1" version="1.1" contents="shopper[email]=shereen1@gmail.pro&amp;shoppers[telephone]=121212111&amp;shoppers[address]=this is address&amp"></http></request>
+<request><http method="POST" url="/shoppers/edit/1" version="1.1" contents="shopper[email]=shereen1@gmail.pro&amp;shoppers[telephone]=121212111&amp;shoppers[address]=this is address"></http></request>
     </session>
   </sessions>
 </tsung>

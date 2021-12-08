@@ -53,6 +53,6 @@ class ShoppersController < ApplicationController
     end
 
     def shopper_update_params
-      params.require(:shopper).permit(:email, :telephone, :address)
+      params.require(:shopper).permit(:email, :telephone, :address, :password)
     end
 end

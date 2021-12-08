@@ -1,3 +1,101 @@
 // Place all the styles related to the Carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {background-color: #f0f0f0;}
+
+// ---------------- //
+
+.productTile{
+  width:70%;
+  height:150px;
+  background-color: white;
+
+}
+
+.TotalTile{
+  width:70%;
+  height:75px;
+  background-color: white;
+
+}
+
+.productTileOpen{
+  width:70%;
+  height:500px;
+  background-color: white;
+
+}
+
+.imgplaceholder{
+  width: 13%;
+  height: 100%;
+  background-color: grey;
+  float: left;
+}
+
+.text{
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 30%;
+  float: left;
+}
+
+.heading{
+  font-size: large;
+  font-weight: 600;
+}
+
+.rating{
+  font-size: small;
+}
+
+.manufacturar{
+  font-size: small;
+  color: grey;
+}
+
+.description{
+  font-size: small;
+}
+
+.specs{
+  font-size: small;
+}
+
+.stock{
+  font-size: medium;
+  color: darkgreen;
+}
+
+.price{
+  font-size: large;
+  //float: right;
+  //padding-top: 70px;
+  //padding-right: 10%;
+}
+
+.rightText{
+  font-size: large;
+  float: right;
+  padding-top: 70px;
+  padding-right: 10%;
+  text-align: center;
+}
+
+.rightTextTotal{
+  font-size: large;
+  float: right;
+  padding-top: 20px;
+  padding-right: 10%;
+  text-align: center;
+}
+
+.customButtonCart {
+  background: #FEBD69;
+  width: 20%;
+  padding: 1vh;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 1vh;
+  border: 0;
+  margin:auto;
+}
