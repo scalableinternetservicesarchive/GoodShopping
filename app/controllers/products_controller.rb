@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
   def show
     @current_user = session[:current_user]
     @product = Product.find(params[:id])
+    @cart = Cart.new()
   end
 
   def new
@@ -41,7 +42,7 @@ class ProductsController < ApplicationController
     # end
 
     if @product.save
-      redirect_to root_path, :notice => "product added"
+      redirect_to products_path, :notice => "product added"
     else
       flash.now[:error] = "Your product is not added!"
       render :new

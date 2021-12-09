@@ -27,6 +27,13 @@
       </div>
     </a>
   <% end %>
+  <% if @current_user["type"] == "manufacturer" %>
+    <a class="main-navbar-link" href="/products/new">
+      <div class="main-navbar-link-wrapper">
+        <p class="main-navbar-link-text">Add Products</p>
+      </div>
+    </a>
+  <% end %>
   <a class="main-navbar-link" href="/logout">
     <div class="main-navbar-link-wrapper">
       <p class="main-navbar-link-text">Log out</p>
@@ -37,6 +44,5 @@
 <h1><%= @manufacturer.name %></h1>
 
 
-<p>Name: <% @manufacturer.name %> </p>
 <p>Email: <%= @manufacturer.email %></p>
 <p>Telephone: <%= @manufacturer.telephone %></p>

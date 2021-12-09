@@ -5,7 +5,7 @@
 </div>
 
 <%
-  profile_url = "/" + @current_user["type"] + "s/" + @current_user["id"].to_s
+  profile_url = "/" + @current_user["type"] + "s/" + @current_user["id"].to_s + "/edit"
   cart_url = "/carts/" + @current_user["id"].to_s
 %>
 
@@ -36,26 +36,20 @@
 
 <h1>Cart Items</h1>
 
-<ul>
-  <% @products.each do |item| %>
-    <li> Item: <%= link_to item["product"].product_name, item["product"] %> Quantity: <%= item["quantity"] %>
-    </li>
-  <% end %>
-</ul>
+
 
 <ul>
   <% total_price = 0%>
   <% @products.each do |item| %>
-    <% total_price = total_price + item["product"].price%>
+    <% total_price = total_price + (item["product"].price * item["quantity"])%>
     <div class=productTile>
       <div class=imgplaceholder></div>
-      <div class=text>
+      <div class=text1>
         <div class=heading><%= link_to item["product"].product_name, item["product"] %></div>
         <div class=rating>Rating: <%= item["product"].average_rating %></div>
-        <div class=description><%= item["project"].description %></div>
+        <div class=description><%= item["product"].description %></div>
         <div class=specs><%= item["product"].product_information %></div>
       </div>
-      <div class=rightText>$<%= item["product"].price %></div>
       <div class=rightText>
         <div class=price>$<%= item["product"].price %>
         <br>
@@ -63,6 +57,7 @@
         </div>
         <br>
       </div>
+    </div>
 
       
     </div>
@@ -70,7 +65,7 @@
   <% end %>
 
   <div class=TotalTile>
-    <div class=text> Total Price: </div>
+    <div class=text1> Total Price: </div>
     <div class=rightTextTotal>$<%= total_price %></div>
   </div>
   <form>

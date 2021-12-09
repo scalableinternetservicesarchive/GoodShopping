@@ -8,7 +8,7 @@ class CartsController < ApplicationController
         @current_user = session[:current_user]
         @cart = Cart.new(cart_params)
         if @cart.save
-            redirect_to @cart #show page 
+            redirect_to products_path #show page 
           else
             flash.now[:error] = "Your product is not added!"
             render :new

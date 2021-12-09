@@ -26,13 +26,20 @@
       </div>
     </a>
   <% end %>
+  <% if @current_user["type"] == "manufacturer" %>
+    <a class="main-navbar-link" href="/products/new">
+      <div class="main-navbar-link-wrapper">
+        <p class="main-navbar-link-text">Add Products</p>
+      </div>
+    </a>
+  <% end %>
   <a class="main-navbar-link" href="/logout">
     <div class="main-navbar-link-wrapper">
       <p class="main-navbar-link-text">Log out</p>
     </div>
   </a>
 </div>
-<% #end%>
+<%#end%>
 <br>
 <p class="page-title">Upload Product</p>
 <div id="sign-up-create-container">
@@ -45,7 +52,7 @@
         <p class:"field-labels"> Name</p>
         <%= f.input :product_name , :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Product Name', label:false%>
         <p class:"field-labels"> Manufacturer</p>
-        <%= f.input :manufacturer_id, collection: Manufacturer.all, include_blank: false , :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Manufacturer', label:false%>
+        <%= f.input :manufacturer_id, collection: [Manufacturer.find(@current_user["id"])], include_blank: false , :input_html => { :class => 'sign-up-create-input-field' }, placeholder: 'Manufacturer', label:false, :disabled=>"disabled"%>
         <p class:"field-labels"> Avarage Rating</p>
         <%= f.input :average_rating, collection: [1,2,3,4,5], include_blank: false , :input_html => { :class => 'sign-up-create-input-field-dropdown' }, placeholder: 'Average Rating', label:false%>
         <p class:"field-labels"> Price</p>
